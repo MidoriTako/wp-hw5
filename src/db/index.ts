@@ -9,6 +9,9 @@ const client = new Client({
   // TODO: 1.1 Add your private environment variables here for your database (postgres)
   connectionString: privateEnv.POSTGRES_URL, // change this line
   // TODO: 1.1 end
+  ssl: {
+    rejectUnauthorized: false // Enable SSL and bypass certificate verification
+  },
 
   connectionTimeoutMillis: 5000,
 });
